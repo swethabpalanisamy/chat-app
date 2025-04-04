@@ -58,7 +58,13 @@ function ChatPage() {
         height: "100vh",
       }}
     >
-      <section style={{ width: "25%", backgroundColor: "" }}>
+      <section
+        style={{
+          width: "25%",
+          backgroundColor: "",
+          borderRight: "1px solid black",
+        }}
+      >
         <ul style={{ margin: "0", padding: "0" }}>
           {contactList.map((contact, index) => {
             return (
@@ -116,7 +122,7 @@ function ChatPage() {
             position: "absolute",
             bottom: 0,
             marginBottom: "10px",
-            width: "100%",
+            // width: "100%",
             display: "flex",
             justifyContent: "flex-start",
             flexDirection: "row",
@@ -127,9 +133,11 @@ function ChatPage() {
             value={typedMessage}
             onChange={(e) => setTypedMessage(e.target.value)}
             id="typemessage"
-            style={{ width: "75px" }}
+            style={{ width: "50vw" }}
           />
-          <button onClick={sendMessage}>Send Message</button>
+          <button onClick={sendMessage} style={{ width: "20vw" }}>
+            Send Message
+          </button>
         </div>
       </section>
     </div>
